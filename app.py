@@ -8,17 +8,21 @@ app = Flask(__name__)
 def home():
     return "Hello, Flask!"
 
-@app.route('/', methods=['POST'])
-def info_nome():
-    return ""
+@app.route('/get', methods=['GET'])
+def get():
+    return "Implementação do metodo GET"
 
-@app.route('/', methods=['PUT'])
-def info_nome():
-    return ""
+@app.route('/post', methods=['POST'])
+def post():
+    return "Implementação do metodo POST"
 
-@app.route('/', methods=['DELETE'])
-def info_nome():
-    return ""
+@app.route('/put', methods=['PUT'])
+def put():
+    return "Implementação do metodo PUT"
+
+@app.route('/delete', methods=['DELETE'])
+def delete():
+    return "Implementação do metodo DELETE"
 
     app.run()
 
