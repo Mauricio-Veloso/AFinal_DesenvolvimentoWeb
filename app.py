@@ -1,7 +1,6 @@
 # Aluno: Mauricio Garcia Veloso Junior
 # Matricula: 64224115
-from flask import Flask, make_response, jsonify, request
-from reserva_dicio import Reserva
+from flask import Flask
 
 app = Flask(__name__)
 
