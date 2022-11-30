@@ -1,29 +1,30 @@
-from flask import Flask, request, json
-from flask import jsonify
-import json 
+# Aluno: Mauricio Garcia Veloso Junior
+# Matricula: 64224115
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/AVFinal', methods=['GET'])
-def home():
-    return "Hello, Flask!"
-
-@app.route('/get', methods=['GET'])
+#Método GET, implementado para receber informações.
+@app.route('/reserva', methods=['GET']) 
 def get():
-    return "Implementação do metodo GET"
+    
+    return "Sua reserva está confirmada."
 
-@app.route('/post', methods=['POST'])
+#Método Post, implementado para enviar informações.
+@app.route('/reserva', methods=['POST']) 
 def post():
-    return "Implementação do metodo POST"
+    return "Obrigado por nos escolher, sua reserva foi efetuada."
 
-@app.route('/put', methods=['PUT'])
+#Método Post, implementado para enviar informações.
+@app.route('/reserva', methods=['PUT']) 
 def put():
-    return "Implementação do metodo PUT"
+    return "As alterações da sua reserva foram bem-sucedidas."
 
-@app.route('/delete', methods=['DELETE'])
+#Método DELETE, implementado para deletar informações.
+@app.route('/reserva', methods=['DELETE']) 
 def delete():
-    return "Implementação do metodo DELETE"
+    return "O cancelamento da sua reserva foi efetuado, tenha um bom dia."
 
-    app.run()
+app.run()
 
     
